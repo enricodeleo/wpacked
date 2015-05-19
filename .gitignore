@@ -1,0 +1,52 @@
+# Commodities
+vendor/*
+!vendor/.gitkeep
+
+# WordPress
+app/wordpress
+app/.htaccess
+app/upgrade
+app/uploads/*
+app/uploads/.gitkeep
+
+# Plugins
+app/plugins/*
+!app/plugins/.gitkeep
+app/mu-plugins/*
+!app/mu-plugins/.gitkeep
+!app/mu-plugins/register-theme.php
+# remember to exlude custom plugins from being ignored 
+# example: !app/plugins/plugintobepreserved
+
+# SQLITE DB
+app/db
+!app/db/.gitkeep
+
+# Composer lock file
+composer.lock
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
