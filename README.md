@@ -8,12 +8,6 @@ Since I'm also a huge WordPress fan, I tried to reproduce a similar flow with my
 ## Key features
 
 * Git-friendly
-* Dependency management
-* Instant local development webserver
-* Deployable and versionable DB
-
-## Components
-
-* [Composer](https://getcomposer.org/)
-* [Rack'em](http://ripeworks.com/rackem/)
-* [SQLite Integration](https://wordpress.org/plugins/sqlite-integration/) (WordPress Plugin) 
+* Dependency management via [Composer](https://getcomposer.org/)
+* Instant local development webserver with [Rack'em](http://ripeworks.com/rackem/)
+* Deployable and versionable DB thanks to [SQLite Integration](https://wordpress.org/plugins/sqlite-integration/) (WordPress Plugin)
