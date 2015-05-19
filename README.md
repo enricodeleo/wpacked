@@ -27,13 +27,21 @@ Since I'm also a huge WordPress fan, I tried to reproduce a similar flow with my
 The best way to get all the requirements is _Homebrew_. 
 If you haven't it yet, well you should. Follow the instructions [on the Homebrew's official website](http://brew.sh/).
 
-There's a project that let you install all the php-related stuffs with ease: [Homebrew php](https://github.com/Homebrew/homebrew-php). Just type on your terminal:
+There's a project that let you install all the php-related stuffs with ease: [Homebrew php](https://github.com/Homebrew/homebrew-php). Get it typing on your terminal:
 
-```bash
-$ brew tap homebrew/dupes
-$ brew tap homebrew/versions
-$ brew tap homebrew/homebrew-php
-```
+`$ brew tap homebrew/dupes`
+
+`$ brew tap homebrew/versions`
+
+`$ brew tap homebrew/homebrew-php`
+
+Then install the php version of your choice with
+
+`$ brew install php56`
+
+You'll need also Composer, so let install it:
+
+`brew install composer`
 
 ### Linux
 
