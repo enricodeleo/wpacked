@@ -10,7 +10,7 @@ Since I'm also a huge WordPress fan, I tried to reproduce a similar flow with my
 
 * Git-friendly
 * Dependency management via [Composer](https://getcomposer.org/)
-* Instant local development webserver with [Rack'em](http://ripeworks.com/rackem/)
+* command line driven wordpress with wp-cli
 * Deployable and versionable DB thanks to [SQLite Integration](https://wordpress.org/plugins/sqlite-integration/) (WordPress Plugin)
 
 ## Requirements

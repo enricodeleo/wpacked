@@ -1,5 +1,5 @@
 {
-    "name": "enricodeleo/contained-wp",
+    "name": "enricodeleo/wpacked",
     "description": "A versionable, self contained, easy deployable WordPress starter point.",
     "authors": [
         {
@@ -8,7 +8,7 @@
         }
     ],
     "license": "MIT",
-    "minimum-stability": "beta",
+    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "composer",
@@ -20,7 +20,9 @@
         "johnpbloch/wordpress": "~4.2",
         "composer/installers": "~1.0",
         "wpackagist-plugin/sqlite-integration": "1.8.1",
-        "rackem/rackem": "@stable"
+        "wp-cli/wp-cli": "0.19.*",
+        "rackem/rackem": "dev-master",
+        "rackem/cgi": "dev-master"
     },
     "extra": {
         "installer-paths": {
