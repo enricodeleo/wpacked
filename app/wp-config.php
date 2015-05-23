@@ -24,7 +24,7 @@ define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
  * DB settings
  */
 $table_prefix = 'wp_';
-define('USE_MYSQL', false);
+define('USE_MYSQL', false);  // turn it to true if you want to use MySQL instead of SQLite
 define('DB_NAME', 'dbname');
 define('DB_USER', 'dbuser');
 define('DB_PASSWORD', 'dbpassword');
