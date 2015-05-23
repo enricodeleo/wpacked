@@ -5,22 +5,23 @@ vendor/*
 # WordPress
 app/wordpress
 app/.htaccess
-app/upgrade
-app/uploads/*
-app/uploads/.gitkeep
+app/content/upgrade
+app/content/uploads/*
+!app/content/uploads/.gitkeep
 
 # Plugins
-app/plugins/*
-!app/plugins/.gitkeep
-app/mu-plugins/*
-!app/mu-plugins/.gitkeep
-!app/mu-plugins/register-theme.php
+app/content/plugins/*
+!app/content/plugins/.gitkeep
+app/content/mu-plugins/*
+!app/content/mu-plugins/.gitkeep
+!app/content/mu-plugins/bedrock-autoloader.php
+!app/content/mu-plugins/register-theme.php
 # remember to exlude custom plugins from being ignored 
 # example: !app/plugins/plugintobepreserved
 
 # SQLITE DB
-app/db
-!app/db/.gitkeep
+app/content/db
+!app/content/db/.gitkeep
 
 # Composer lock file
 composer.lock
