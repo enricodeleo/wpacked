@@ -3,6 +3,7 @@
 require_once(dirname(__DIR__) . '/vendor/autoload.php');
 
 $root_dir = dirname(__DIR__);
+
 $webroot_dir = $root_dir . '/app';
 define('WEBROOT_DIR', $webroot_dir);
 
@@ -15,7 +16,7 @@ define('WP_SITEURL', 'http://localhost:3000/wordpress');
 /**
  * Custom Content Directory
  */
-define('CONTENT_DIR', '/app/content');
+define('CONTENT_DIR', '/content');
 define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
@@ -34,8 +35,8 @@ define('DB_COLLATE', '');
 /**
 * SQLITE DB
 */
-// define('DB_DIR', $webroot_dir . '/app/db/');
-// define('DB_FILE', 'memory.sqlite');
+define('DB_DIR', $root_dir  . '/database/');
+define('DB_FILE', 'db.sqlite');
 
 /**
  * Authentication Unique Keys and Salts
@@ -63,13 +64,18 @@ define( 'WP_MEMORY_LIMIT', '128M' );
 define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 
 // Optional debug config
-@ini_set( 'log_errors', 'Off' );
-@ini_set( 'display_errors', 'On' );
+@ini_set('error_reporting', E_ALL);
+@ini_set('display_errors', '1');
+@ini_set('log_errors', '1');
+@ini_set ("error_log", WP_CONTENT_DIR . "/logs/php_error_log.txt");
 define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_LOG', false );
 define( 'WP_DEBUG_DISPLAY', true );
+define( 'WP_DEBUG_LOG', true );
+
 // define( 'SCRIPT_DEBUG', true );
 // define( 'CONCATENATE_SCRIPTS', false );
+// define( 'AUTOMATIC_UPDATER_DISABLED', true );
+// define( 'WP_AUTO_UPDATE_CORE', false );
 
 /**
  * Bootstrap WordPress

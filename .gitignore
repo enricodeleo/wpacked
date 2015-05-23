@@ -15,13 +15,12 @@ app/content/plugins/*
 app/content/mu-plugins/*
 !app/content/mu-plugins/.gitkeep
 !app/content/mu-plugins/bedrock-autoloader.php
-!app/content/mu-plugins/register-theme.php
 # remember to exlude custom plugins from being ignored 
 # example: !app/plugins/plugintobepreserved
 
 # SQLITE DB
-app/content/db
-!app/content/db/.gitkeep
+./database
+!./database/.gitkeep
 
 # Composer lock file
 composer.lock
