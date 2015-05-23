@@ -49,5 +49,14 @@ You'll need also Composer, so let install it:
 
 ## Quick Start
 
-Clone this repo and
+Clone this repo and type 
 
+```bash
+composer install
+```
+
+in order to install all the dependencies of the project. _You are already done_, just launch the php's built-in server with
+
+```bash
+php -S localhost:3000 -t app/
+```
