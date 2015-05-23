@@ -15,10 +15,9 @@ define('WP_SITEURL', 'http://localhost:3000/wordpress');
 /**
  * Custom Content Directory
  */
-define( 'PLUGINDIR', $webroot_dir . '/plugins' );
-define( 'WP_PLUGIN_DIR', $webroot_dir . '/plugins' );
-define( 'WP_PLUGIN_URL',  WP_HOME . '/plugins' );
-define( 'UPLOADS', $webroot_dir . '/uploads' );
+define('CONTENT_DIR', '/app/content');
+define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
+define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
 /**
  * DB settings
@@ -35,8 +34,8 @@ define('DB_COLLATE', '');
 /**
 * SQLITE DB
 */
-define('DB_DIR', $webroot_dir . '/app/db/');
-define('DB_FILE', 'memory.sqlite');
+// define('DB_DIR', $webroot_dir . '/app/db/');
+// define('DB_FILE', 'memory.sqlite');
 
 /**
  * Authentication Unique Keys and Salts
@@ -49,11 +48,12 @@ define('AUTH_SALT',        'm~|^<ab)VdD9IMCZa0Z? ]pnQjn]k6[HUR!FmE8d8RGuDRb(KQCY
 define('SECURE_AUTH_SALT', 'fKu~[oqY[20xAR|;S^*1x*?Y0>h~;`CNenxd7^E!@<jnnpRf%zD%-l(8EVvcrGs{');
 define('LOGGED_IN_SALT',   'i]O`J02T|B<?|;p1yecUZWD2sdGYur6f=&&MI8IYLHBQs~MUTpP-,+9jMp5ZJ!kx');
 define('NONCE_SALT',       '3S{O_/tYOPGB^s-},?$I<{5[A:%N75f!-h*lx.emj|B$U8h3)baV8i/0fX<oc=|d');
+
 /**
  * Custom Settings
  */
 define('AUTOMATIC_UPDATER_DISABLED', true);
-define('DISABLE_WP_CRON', true);
+define('DISABLE_WP_CRON', false);
 define('DISALLOW_FILE_EDIT', true);
 
 /**

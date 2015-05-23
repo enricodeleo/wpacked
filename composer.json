@@ -19,14 +19,13 @@
         "php": ">=5.4",
         "johnpbloch/wordpress": "~4.2",
         "composer/installers": "~1.0",
-        "wpackagist-plugin/sqlite-integration": "1.8.1",
-        "wp-cli/wp-cli": "0.19.*"
+        "wpackagist-plugin/sqlite-integration": "1.8.1"
     },
     "extra": {
         "installer-paths": {
-            "app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpackagist-plugin/sqlite-integration"],
-            "app/plugins/{$name}/": ["type:wordpress-plugin"],
-            "app/themes/{$name}/": ["type:wordpress-theme"]
+            "app/content/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpackagist-plugin/sqlite-integration"],
+            "app/content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "app/content/themes/{$name}/": ["type:wordpress-theme"]
         },
         "wordpress-install-dir": "app/wordpress"
     }
