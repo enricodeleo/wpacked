@@ -67,7 +67,6 @@ define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 @ini_set('error_reporting', E_ALL);
 @ini_set('display_errors', '1');
 @ini_set('log_errors', '1');
-@ini_set ("error_log", WP_CONTENT_DIR . "/logs/php_error_log.txt");
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_DISPLAY', true );
 define( 'WP_DEBUG_LOG', true );
