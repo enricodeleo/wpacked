@@ -19,8 +19,8 @@ app/content/mu-plugins/*
 # example: !app/plugins/plugintobepreserved
 
 # SQLITE DB
-./database
-!./database/.gitkeep
+database
+!database/.gitkeep
 
 # Composer lock file
 composer.lock
