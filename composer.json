@@ -23,7 +23,7 @@
     },
     "extra": {
         "installer-paths": {
-            "app/content/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpackagist-plugin/sqlite-integration"],
+            "app/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
             "app/content/plugins/{$name}/": ["type:wordpress-plugin"],
             "app/content/themes/{$name}/": ["type:wordpress-theme"]
         },
