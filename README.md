@@ -1,3 +1,5 @@
+![WPacked Logo](logo.png)
+
 #WPacked
 
 ## Background
@@ -28,19 +30,29 @@ If you haven't it yet, well you should. Follow the instructions [on the Homebrew
 
 There's a project that let you install all the php-related stuffs with ease: [Homebrew php](https://github.com/Homebrew/homebrew-php). Get it typing on your terminal:
 
-`$ brew tap homebrew/dupes`
+```bash
+$ brew tap homebrew/dupes
+```
 
-`$ brew tap homebrew/versions`
+```bash
+$ brew tap homebrew/versions
+```
 
-`$ brew tap homebrew/homebrew-php`
+```bash
+$ brew tap homebrew/homebrew-php
+```
 
 Then install the php version of your choice with
 
-`$ brew install php56`
+```bash
+$ brew install php56
+```
 
 You'll need also Composer, so let install it:
 
-`brew install composer`
+```bash
+brew install composer
+```
 
 #### Optional
 
