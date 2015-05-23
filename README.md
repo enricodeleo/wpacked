@@ -59,7 +59,9 @@ brew install composer
 Optional but suggested [wp-cli](https://github.com/wp-cli/wp-cli). It'll speed up several operations giving you the possibility to issue commands to WordPress via terminal.
 This repo has a wp-cli.yml that automatically will point wp-cli to the actual wordpress directory, you just need to use the `wp` command inside the project directory.
 
-`brew install wp-cli`
+```bash
+brew install wp-cli
+```
 
 ### Linux
 
@@ -73,8 +75,12 @@ Clone this repo and type
 composer install
 ```
 
-in order to install all the dependencies of the project. *You are already done*, just launch the php's built-in server with
+in order to install all the dependencies of the project. **You are already done**, just launch the php's built-in server with
 
 ```bash
 php -S localhost:3000 -t app/
 ```
+
+## Deploy :zap:
+
+Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
