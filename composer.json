@@ -20,9 +20,7 @@
         "johnpbloch/wordpress": "~4.2",
         "composer/installers": "~1.0",
         "wpackagist-plugin/sqlite-integration": "1.8.1",
-        "wp-cli/wp-cli": "0.19.*",
-        "rackem/rackem": "dev-master",
-        "rackem/cgi": "dev-master"
+        "wp-cli/wp-cli": "0.19.*"
     },
     "extra": {
         "installer-paths": {
