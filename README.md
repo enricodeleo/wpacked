@@ -29,16 +29,17 @@ Since I'm a huge WordPress fan, I tried to reproduce a similar flow with my favo
 
 ### OS X 
 
-#### Quick, built-in solution
+#### Quickest, built-in solution
 
-You already have php and SQLite installed on your machine  
+You're OS is shipped with php and SQLite already installed.  
 
 #### My favorite 
 
-The best way to get all the requirements is _Homebrew_. 
+As a developer you might want to use the version of php of your choice (remember you need at least 5.4).
+The best way to manage packages and installations on your Mac is _Homebrew_. 
 If you haven't it yet, well you should. Follow the instructions [on the Homebrew's official website](http://brew.sh/).
 
-There's a project that let you install all the php-related stuffs with ease: [Homebrew php](https://github.com/Homebrew/homebrew-php). Get it typing on your terminal:
+There's a project dedicated to all the php-related stuffs manageable via Homebrew: [Homebrew php](https://github.com/Homebrew/homebrew-php). Get it typing on your terminal:
 
 ```bash
 $ brew tap homebrew/dupes
