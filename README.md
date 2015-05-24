@@ -4,9 +4,13 @@
 
 ## Background
 
-Since I started developing with Node.js I really loved the modularity of the usual node development flow. You usually just need to pull a repo (or scaffold a project with yeoman) and you're good to go on your local machine, without a full fledged webserver, and with a lovely dependency management. And when you're ready to go online? Well you just deploy your package or sort of. 
+I really like developing using the Node.js-ecosystem. I love to make my projects modular with npm and bower, I adore the easy dependency management. 
+The thing I like the most is that I can start working immediately on my local machine without a full fledged webserver. 
+Of course there are tools that give you quickly(sh) a development server within your machine, but all of them need Vagrant and is quite an overkill.
 
-Since I'm also a huge WordPress fan, I tried to reproduce a similar flow with my favorite CMS, so here we are: my attempt to make WordPress as a self contained, _packaged application_ as possible. Hope you enjoy it ;)
+I also like the idea of just dropping a project on a webserver when I'm done (almost impossible with MySQL). 
+
+Since I'm a huge WordPress fan, I tried to reproduce a similar flow with my favorite CMS, so here we are: my attempt to make WordPress as a self contained, _packaged application_ as possible. Hope you enjoy it ;)
 
 ## Key features
 
@@ -24,6 +28,12 @@ Since I'm also a huge WordPress fan, I tried to reproduce a similar flow with my
 ## Requirements installation
 
 ### OS X 
+
+#### Quick, built-in solution
+
+You already have php and SQLite installed on your machine  
+
+#### My favorite 
 
 The best way to get all the requirements is _Homebrew_. 
 If you haven't it yet, well you should. Follow the instructions [on the Homebrew's official website](http://brew.sh/).
@@ -67,7 +77,9 @@ brew install wp-cli
 
 - todo, feel free to pull request -
 
-## Quick Start
+## Usage
+
+Now the reason of the all thing: instant development. Just two commands.   
 
 Clone this repo and type 
 
