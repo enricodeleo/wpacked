@@ -102,9 +102,11 @@ in order to install all the dependencies of the project. **You are already done*
 php -S localhost:3000 -t app/
 ```
 
-## Deploy :zap:
+# Deploy :zap:
 
 Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
+
+--------
 
 # Notes about SQLite
 
