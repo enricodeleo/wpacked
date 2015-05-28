@@ -2,15 +2,23 @@
 
 #WPacked
 
+**WPacked** tries to give you an easy development starter kit easy to maintain and deploy, **within a clean pure local environment**. Just like you usually do with npm.
+
+No more XAMP/MAMP or virtual machines, or other (often conflicting) softwares on your local machines. 
+**You just need PHP**. 
+
+Clean, versionable, quick.
+
 ## Background
 
 I really like developing using the Node.js-ecosystem. I love to make my projects modular with npm and bower, I adore the easy dependency management. 
-The thing I like the most is that I can start working immediately on my local machine without a full fledged webserver. 
-Of course there are tools that give you quickly(sh) a development server within your machine, but all of them need Vagrant and is quite an overkill.
+The thing I like the most is that I can start working immediately on my local machine without a full fledged webserver.
+
+Of course there are tools that give you quickly(sh) a development server within your machine, (I'm personally a big fan of [roots/bedrock](https://github.com/roots/bedrock), that inspired this project) but all of them need a Vagrant virtual machine. Quite an overkill for most project.
 
 I also like the idea of just dropping a project on a webserver when I'm done (almost impossible with MySQL). 
 
-Since I'm a huge WordPress fan, I tried to reproduce a similar flow with my favorite CMS, so here we are: my attempt to make WordPress as a self contained, _packaged application_ as possible. Hope you enjoy it ;)
+I tried to create a lovely and easy development flow with my favorite CMS, so here we are: my attempt to make WordPress as a self contained, _packaged application_ as possible. Hope you enjoy it ;)
 
 ## Key features
 
@@ -31,7 +39,7 @@ Since I'm a huge WordPress fan, I tried to reproduce a similar flow with my favo
 
 #### Quickest, built-in solution
 
-You're OS is shipped with php and SQLite already installed.  
+You're OS is shipped with php and SQLite already installed. [Follow these instructions to get Composer](https://getcomposer.org/doc/00-intro.md).
 
 #### My favorite 
 
@@ -97,3 +105,10 @@ php -S localhost:3000 -t app/
 ## Deploy :zap:
 
 Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
+
+# Notes about SQLite
+
+Even if the WordPress plugin included on this repo tries to create a drop-in replacement for MySQL converting all the MySQL queries to SQLite, there are certain operations that are not possible on SQLite. Hence, some plugin may not work as expected. You can see [a list of known non-working plugins here](http://dogwood.skr.jp/wordpress/sqlite-integration/#plugin-compat). I personally haven't found issues with other plugins until now (even heavy ones like WPML) but keep in mind that it could happen.
+
+Another characteristic to keep in mind is that SQLite is far from being a production database for big sites or with an heavy traffic. In those cases you want to stay on a more efficient and scalable db engine like MySQL (or my favorite fork MariaDB). You can switch from SQLite to MySQL without uninstalling the plugin with a simple false in the config file (keeping SQLite on local machine and MySQL on staging and production is a way).
+
