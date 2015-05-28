@@ -5,6 +5,7 @@ require_once(dirname(__DIR__) . '/vendor/autoload.php');
 
 // Load env variables
 Dotenv::load(dirname(__DIR__));
+Dotenv::required('ENVIRONMENT', array('development', 'staging', 'production'));
 
 // which environment is it?
 define('ENVIRONMENT', getenv('ENVIRONMENT') );

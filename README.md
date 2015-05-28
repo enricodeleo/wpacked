@@ -108,7 +108,7 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 
 |**variable name** |**role**|
 |------------------|--------|
-| ENVIRNOMENT      | the environment where the app lives in (tipically development, stagin production) |
+| ENVIRNOMENT      | the environment where the app lives in (development, staging, production) |
 | WP_HOME          | the url of the website|
 | WP_SITEURL       | the url of the wordpress directory, here is urlofthesite.ltd/wordpress|
 | DB_NAME          | name of the MySQL DB|
