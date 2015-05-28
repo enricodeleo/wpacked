@@ -123,7 +123,9 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 
 Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
 
---------
+
+_________________________________________
+
 
 # Notes about SQLite
 
