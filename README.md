@@ -104,7 +104,7 @@ php -S localhost:3000 -t app/
 
 # WP Configuration
 
-Thanks to phpdotenv you can store your configurations outside the public directory in a .env file. You'll find this file in the root directory of the project with the following variables:
+Thanks to phpdotenv you can store your configurations outside the public directory in a `.env` file. You'll find this file in the root directory of the project with the following variables:
 
 |**variable name** |**role**|
 |------------------|--------|
