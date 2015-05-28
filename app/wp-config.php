@@ -1,6 +1,13 @@
 <?php
 
+// Load all composer dependencies
 require_once(dirname(__DIR__) . '/vendor/autoload.php');
+
+// Load env variables
+Dotenv::load(dirname(__DIR__));
+
+// which environment is it?
+define('ENVIRONOMENT', getenv('ENVIRONOMENT') );
 
 $root_dir = dirname(__DIR__);
 
@@ -10,8 +17,8 @@ define('WEBROOT_DIR', $webroot_dir);
 /**
  * URLs
  */
-define('WP_HOME', 'http://localhost:3000');
-define('WP_SITEURL', 'http://localhost:3000/wordpress');
+define('WP_HOME', getenv('WP_HOME'));
+define('WP_SITEURL', getenv('WP_SITEURL'));
 
 /**
  * Custom Content Directory
@@ -24,11 +31,11 @@ define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
  * DB settings
  */
 $table_prefix = 'wp_';
-define('USE_MYSQL', false);  // turn it to true if you want to use MySQL instead of SQLite
-define('DB_NAME', 'dbname');
-define('DB_USER', 'dbuser');
-define('DB_PASSWORD', 'dbpassword');
-define('DB_HOST', 'localhost');
+define('USE_MYSQL', getenv('USE_MYSQL'));  // turn it to true if you want to use MySQL instead of SQLite
+define('DB_NAME', getenv('DB_NAME'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_PASSWORD', getenv('DB_PASSWORD'));
+define('DB_HOST', getenv('DB_HOST'));
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
@@ -54,28 +61,24 @@ define('NONCE_SALT',       '3S{O_/tYOPGB^s-},?$I<{5[A:%N75f!-h*lx.emj|B$U8h3)baV
  * Custom Settings
  */
 define('AUTOMATIC_UPDATER_DISABLED', true);
-define('DISABLE_WP_CRON', false);
-define('DISALLOW_FILE_EDIT', true);
+define('DISABLE_WP_CRON', getenv('DISABLE_WP_CRON')); 
+define('DISALLOW_FILE_EDIT', true); // don't add plugins or edit files within the dashboard 
 
 /**
- * Increase memory
+ * Increase default memory limit
  */
 define( 'WP_MEMORY_LIMIT', '128M' );
 define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 
 // Optional debug config
-@ini_set('error_reporting', E_ALL);
-@ini_set('display_errors', '1');
-@ini_set('log_errors', '1');
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_DISPLAY', true );
-define( 'WP_DEBUG_LOG', true );
-
-
-// define( 'SCRIPT_DEBUG', true );
-// define( 'CONCATENATE_SCRIPTS', false );
-// define( 'AUTOMATIC_UPDATER_DISABLED', true );
-// define( 'WP_AUTO_UPDATE_CORE', false );
+if ( ENVIRONOMENT == 'development' ) {
+  @ini_set('error_reporting', E_ALL);
+  @ini_set('display_errors', '1');
+  @ini_set('log_errors', '1');
+  define( 'WP_DEBUG', true );
+  define( 'WP_DEBUG_DISPLAY', true );
+  define( 'WP_DEBUG_LOG', true );
+}
 
 /**
  * Bootstrap WordPress

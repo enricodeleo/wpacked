@@ -102,6 +102,23 @@ in order to install all the dependencies of the project. **You are already done*
 php -S localhost:3000 -t app/
 ```
 
+# WP Configuration
+
+Thanks to phpdotenv you can store your configurations outside the public directory in a .env file. You'll find this file in the root directory of the project with the following variables:
+
+|**variable name** |**role**|
+|------------------|--------|
+| ENVIRNOMENT      | the environment where the app lives in (tipically development, stagin production) |
+| WP_HOME          | the url of the website|
+| WP_SITEURL       | the url of the wordpress directory, here is urlofthesite.ltd/wordpress|
+| DB_NAME          | name of the MySQL DB|
+| DB_USER          | user of the MySQL DB|
+| DB_PASSWORD      | password of the MySQL DB|
+| DB_HOST          | host of the MySQL DB|
+| USE_MYSQL        | whether or not the app should use MySQL (if false it uses SQLite)|
+| DISABLE_WP_CRON  | whether or not the app should use the WP cron system (false requires setting up cron manually on your server)| 
+
+
 # Deploy :zap:
 
 Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
