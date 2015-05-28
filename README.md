@@ -1,6 +1,6 @@
 ![WPacked Logo](logo.png)
 
-#WPacked
+# WPacked
 
 **WPacked** tries to give you an easy development starter kit easy to maintain and deploy, **within a clean pure local environment**. Just like you usually do with npm.
 
@@ -102,7 +102,7 @@ in order to install all the dependencies of the project. **You are already done*
 php -S localhost:3000 -t app/
 ```
 
-# WP Configuration
+## WP Configuration
 
 Thanks to phpdotenv you can store your configurations outside the public directory in a `.env` file. You'll find this file in the root directory of the project with the following variables:
 
@@ -121,7 +121,7 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 **For security purposes, don't forget to set AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT, NONCE_SALT to different (long) random strings on production.**
 
 
-# Deploy :zap:
+## Deploy :zap:
 
 Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
 
@@ -129,7 +129,7 @@ Thanks to SQLite DB the project itself is a self-contained package. You can just
 _________________________________________
 
 
-# Notes about SQLite
+## Notes about SQLite
 
 Even if the WordPress plugin included on this repo tries to create a drop-in replacement for MySQL converting all the MySQL queries to SQLite, there are certain operations that are not possible on SQLite. Hence, some plugin may not work as expected. You can see [a list of known non-working plugins here](http://dogwood.skr.jp/wordpress/sqlite-integration/#plugin-compat). I personally haven't found issues with other plugins until now (even heavy ones like WPML) but keep in mind that it could happen.
 
