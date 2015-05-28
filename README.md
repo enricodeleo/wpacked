@@ -117,14 +117,8 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 | DB_HOST          | host of the MySQL DB|
 | USE_MYSQL        | whether or not the app should use MySQL (if false it uses SQLite)|
 | DISABLE_WP_CRON  | whether or not the app should use the WP cron system (false requires setting up cron manually on your server)|
-| AUTH_KEY |set this variable to random strings |
-| SECURE_AUTH_KEY | set this variable to random strings |
-| LOGGED_IN_KEY | set this variable to random strings |
-| NONCE_KEY | set this variable to random strings |
-| AUTH_SALT | set this variable to random strings |
-| SECURE_AUTH_SALT | set this variable to random strings |
-| LOGGED_IN_SALT | set this variable to random strings |
-| NONCE_SALT | set this variable to random strings |
+
+**For security purposes, don't forget to set AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT, NONCE_SALT to different (long) random strings on production.**
 
 
 # Deploy :zap:
