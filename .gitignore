@@ -23,6 +23,9 @@ app/content/mu-plugins/*
 database
 !database/.gitkeep
 
+# Debug log
+app/content/debug.log
+
 # Composer lock file
 composer.lock
 
