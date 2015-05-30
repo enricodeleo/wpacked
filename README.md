@@ -20,6 +20,8 @@ I also like the idea of just dropping a project on a webserver when I'm done (al
 
 I tried to create a lovely and easy development flow with my favorite CMS, so here we are: my attempt to make WordPress as a self contained, _packaged application_ as possible. Hope you enjoy it ;)
 
+![Sample Video](sample.gif)
+
 ## Key features
 
 * Git-friendly
