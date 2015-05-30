@@ -99,7 +99,7 @@ composer install
 in order to install all the dependencies of the project. **You are already done**, just launch the php's built-in server with
 
 ```bash
-php -S localhost:3000 -t app/
+php -S localhost:8000 -t app/
 ```
 
 ## WP Configuration
