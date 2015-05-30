@@ -128,6 +128,18 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
 
 
+## How to add WordPress Plugins
+
+All the php dependencies are managed by Composer, the same happens for WordPress plugins (of course if they are commodities and not custom ones). You can find all the packagist entries for WordPress plugins on the [WPackagist official website](http://wpackagist.org/). 
+
+For example, searching for buddypress would return something like `"wpackagist-plugin/buddypress": "~2.3.0"`, you just need to drop this line inside the `package.json` file and type 
+
+```bash
+composer update
+```
+
+The whole plugins directory is under `.gitignore`, so if you add custom plugins you need to exclude them (you'll find an example within the .gitignore file) and add them to git.
+
 _________________________________________
 
 
