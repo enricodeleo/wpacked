@@ -106,7 +106,7 @@ php -S localhost:8000 -t app/
 
 ## WP Configuration
 
-Thanks to phpdotenv you can store your configurations outside the public directory in a `.env` file. You'll find this file in the root directory of the project with the following variables:
+Thanks to phpdotenv you can store your configurations outside the public directory in a `.env` file. You'll find the file `.env.example` that you need to copy to `.env` within the root directory of the project with the following variables:
 
 |**variable name** |**role**|
 |------------------|--------|
@@ -122,6 +122,8 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 
 **For security purposes, don't forget to set AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT, NONCE_SALT to different (long) random strings on production.**
 
+**NOTE**
+Don't commit the `.env` file, it's very likely that you want sapearate settings for each copy of the project. e.g. different urls for each environment like website.dev, staging.website.com and website.com. Just set those domains on each respective .env and you're ready to go :)
 
 ## Deploy :zap:
 
