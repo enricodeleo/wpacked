@@ -29,6 +29,9 @@ app/content/debug.log
 # Composer lock file
 composer.lock
 
+# Keep separate .env files for each copy of this project
+.env
+
 # OSX
 .DS_Store
 .AppleDouble
