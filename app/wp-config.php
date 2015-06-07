@@ -3,14 +3,14 @@
 // Autoload Composer dependencies
 require_once(dirname(__DIR__) . '/vendor/autoload.php');
 
-// Load env variables
-Dotenv::load(dirname(__DIR__));
-Dotenv::required('ENVIRONMENT', array('development', 'staging', 'production'));
-
+// Define base paths
 $root_dir = dirname(__DIR__);
-
 $webroot_dir = $root_dir . '/app';
 define('WEBROOT_DIR', $webroot_dir);
+
+// Load env variables
+Dotenv::load($root_dir);
+Dotenv::required('ENVIRONMENT', array('development', 'staging', 'production'));
 
 /**
  * ENVIRONMENT
