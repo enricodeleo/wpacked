@@ -79,18 +79,17 @@ define( 'WP_MEMORY_LIMIT', '128M' );
 define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 
 // Optional debug config
+if ( getenv('WP_ENV') == 'development' ): 
 @ini_set('error_reporting', E_ALL);
 @ini_set('display_errors', '1');
 @ini_set('log_errors', '1');
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_DISPLAY', true );
 define( 'WP_DEBUG_LOG', true );
+define( 'SCRIPT_DEBUG', true );
+define( 'CONCATENATE_SCRIPTS', false );
+endif;
 
-
-// define( 'SCRIPT_DEBUG', true );
-// define( 'CONCATENATE_SCRIPTS', false );
-// define( 'AUTOMATIC_UPDATER_DISABLED', true );
-// define( 'WP_AUTO_UPDATE_CORE', false );
 
 /**
  * Bootstrap WordPress
