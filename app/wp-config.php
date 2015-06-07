@@ -79,7 +79,7 @@ define( 'WP_MEMORY_LIMIT', '128M' );
 define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 
 // Optional debug config
-if ( getenv('WP_ENV') == 'development' ): 
+if ( WP_ENV == 'development' ): 
 @ini_set('error_reporting', E_ALL);
 @ini_set('display_errors', '1');
 @ini_set('log_errors', '1');
