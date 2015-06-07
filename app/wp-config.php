@@ -62,11 +62,15 @@ define('LOGGED_IN_SALT',   'i]O`J02T|B<?|;p1yecUZWD2sdGYur6f=&&MI8IYLHBQs~MUTpP-
 define('NONCE_SALT',       '3S{O_/tYOPGB^s-},?$I<{5[A:%N75f!-h*lx.emj|B$U8h3)baV8i/0fX<oc=|d');
 
 /**
- * Custom Settings
+ * Consistently update via composer and disallow file edit via browser
  */
 define('AUTOMATIC_UPDATER_DISABLED', true);
-define('DISABLE_WP_CRON', false);
-define('DISALLOW_FILE_EDIT', true);
+define('DISALLOW_FILE_EDIT', true); 
+
+/**
+ * In most cases you want to run a true cron task
+ */
+define('DISABLE_WP_CRON', getenv('DISABLE_WP_CRON'));
 
 /**
  * Increase memory
