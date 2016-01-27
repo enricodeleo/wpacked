@@ -9,8 +9,9 @@ $webroot_dir = $root_dir . '/app';
 define('WEBROOT_DIR', $webroot_dir);
 
 // Load env variables
-Dotenv::load($root_dir);
-Dotenv::required('ENVIRONMENT', array('development', 'staging', 'production'));
+$dotenv = new Dotenv\Dotenv($root_dir);
+$dotenv->load();
+$dotenv->required('ENVIRONMENT', array('development', 'staging', 'production'));
 
 /**
  * ENVIRONMENT
