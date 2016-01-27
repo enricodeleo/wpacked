@@ -17,8 +17,8 @@
     ],
     "require": {
         "php": ">=5.4",
-        "vlucas/phpdotenv": "~1.0.9",
-        "johnpbloch/wordpress": "~4.2",
+        "vlucas/phpdotenv": "~2.2.0",
+        "johnpbloch/wordpress": "~4.4.1",
         "composer/installers": "~1.0",
         "wpackagist-plugin/sqlite-integration": "1.8.1"
     },
