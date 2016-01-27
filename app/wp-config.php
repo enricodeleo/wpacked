@@ -11,7 +11,7 @@ define('WEBROOT_DIR', $webroot_dir);
 // Load env variables
 $dotenv = new Dotenv\Dotenv($root_dir);
 $dotenv->load();
-$dotenv->required('ENVIRONMENT', array('development', 'staging', 'production'));
+$dotenv->required('ENVIRONMENT')->allowedValues(['development', 'staging', 'production']);
 
 /**
  * ENVIRONMENT
