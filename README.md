@@ -22,6 +22,10 @@ I tried to create a lovely and easy development flow with my favorite CMS, so he
 
 ![Sample Video](sample.gif)
 
+## Slideshare presentation
+
+Checkout the presentation published during August Wordpress Meetup in Rome http://www.slideshare.net/EnricoDeleo/modern-gentlemens-wordpress
+
 ## Key features
 
 * Git-friendly
