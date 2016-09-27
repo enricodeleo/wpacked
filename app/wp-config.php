@@ -16,7 +16,7 @@ $dotenv->required('ENVIRONMENT')->allowedValues(['development', 'staging', 'prod
 /**
  * ENVIRONMENT
  */
-define('WP_ENV', getenv('WP_ENV')); // development | staging | production
+define('WP_ENV', getenv('ENVIRONMENT')); // development | staging | production
 
 /**
  * URLs
