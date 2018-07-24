@@ -155,3 +155,8 @@ Even if the WordPress plugin included on this repo tries to create a drop-in rep
 
 Another characteristic to keep in mind is that **SQLite is far from being a production database for big sites or with an heavy traffic**. In those cases you want to stay on a more efficient and scalable db engine like MySQL (or my favorite, MariaDB). You can switch from SQLite to MySQL without uninstalling the plugin with a simple false in the config file (keeping SQLite on local machine and MySQL on staging and production is a way).
 
+_________________________________________
+
+## Author
+[Enrico Deleo](https://enricodeleo.com)
+
