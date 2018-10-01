@@ -8,10 +8,13 @@ $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/app';
 define('WEBROOT_DIR', $webroot_dir);
 
-// Load env variables
-$dotenv = new Dotenv\Dotenv($root_dir);
-$dotenv->load();
-$dotenv->required('ENVIRONMENT')->allowedValues(['development', 'staging', 'production']);
+// Load env variables if .env file exists
+$filePath = $root_dir . '/.env';
+if( is_readable($filePath) ) {
+  $dotenv = new Dotenv\Dotenv($root_dir);
+  $dotenv->load();
+  $dotenv->required('ENVIRONMENT')->allowedValues(['development', 'staging', 'production']);
+}
 
 /**
  * ENVIRONMENT
