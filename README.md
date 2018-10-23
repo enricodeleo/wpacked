@@ -56,11 +56,7 @@ If you haven't it yet, well you should. Follow the instructions [on the Homebrew
 There's a project dedicated to all the php-related stuffs manageable via Homebrew: [Homebrew php](https://github.com/Homebrew/homebrew-php). Get it typing on your terminal:
 
 ```bash
-$ brew tap homebrew/dupes
-```
-
-```bash
-$ brew tap homebrew/versions
+$ brew update && brew upgrade
 ```
 
 ```bash
