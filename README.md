@@ -53,14 +53,10 @@ As a developer you might want to use the version of php of your choice (remember
 The best way to manage packages and installations on your Mac is _Homebrew_. 
 If you haven't it yet, well you should. Follow the instructions [on the Homebrew's official website](http://brew.sh/).
 
-There's a project dedicated to all the php-related stuffs manageable via Homebrew: [Homebrew php](https://github.com/Homebrew/homebrew-php). Get it typing on your terminal:
+Suggested to update homebrew to the latest version
 
 ```bash
 $ brew update && brew upgrade
-```
-
-```bash
-$ brew tap homebrew/homebrew-php
 ```
 
 Then install the php version of your choice with
