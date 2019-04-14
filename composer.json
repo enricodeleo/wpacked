@@ -22,6 +22,15 @@
         "composer/installers": "^1.0",
         "wpackagist-plugin/sqlite-integration": "1.8.1"
     },
+    "require-dev": {
+        "natanfelles/php-server": "^2"
+    },
+    "scripts": {
+        "serve": "php-server"
+    },
+    "scripts-descriptions": {
+        "serve": "Start the built-in web server for development"
+    },
     "extra": {
         "installer-paths": {
             "app/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],

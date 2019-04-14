@@ -4,19 +4,19 @@
 
 **WPacked** tries to give you an easy development starter kit easy to maintain and deploy, **within a clean pure local environment**. Just like you usually do with npm.
 
-No more XAMP/MAMP or virtual machines, or other (often conflicting) softwares on your local machines. 
-**You just need PHP**. 
+No more XAMP/MAMP or virtual machines, or other (often conflicting) softwares on your local machines.
+**You just need PHP**.
 
 Clean, versionable, quick.
 
 ## Background
 
-I really like developing using the Node.js-ecosystem. I love to make my projects modular with npm and bower, I adore the easy dependency management. 
+I really like developing using the Node.js-ecosystem. I love to make my projects modular with npm and bower, I adore the easy dependency management.
 The thing I like the most is that I can start working immediately on my local machine without a full fledged webserver.
 
 Of course there are tools that give you quickly(sh) a development server within your machine, (I'm personally a big fan of [roots/bedrock](https://github.com/roots/bedrock), that inspired this project) but all of them need a Vagrant virtual machine. Quite an overkill for most project.
 
-I also like the idea of just dropping a project on a webserver when I'm done (almost impossible with MySQL). 
+I also like the idea of just dropping a project on a webserver when I'm done (almost impossible with MySQL).
 
 I tried to create a lovely and easy development flow with my favorite CMS, so here we are: my attempt to make WordPress as a self contained, _packaged application_ as possible. Hope you enjoy it ;)
 
@@ -41,16 +41,16 @@ Checkout the presentation published during August Wordpress Meetup in Rome http:
 
 ## Requirements installation
 
-### OS X 
+### OS X
 
 #### Quickest, built-in solution
 
 You're OS is shipped with php and SQLite already installed. [Follow these instructions to get Composer](https://getcomposer.org/doc/00-intro.md).
 
-#### My favorite 
+#### My favorite
 
-As a developer you might want to use the version of php of your choice (remember you need at least 5.4).
-The best way to manage packages and installations on your Mac is _Homebrew_. 
+As a developer you might want to use the version of php of your choice (remember WordPress supports legacy php 5.2.4+ but recommends latest 7+ versions).
+The best way to manage packages and installations on your Mac is _Homebrew_.
 If you haven't it yet, well you should. Follow the instructions [on the Homebrew's official website](http://brew.sh/).
 
 Suggested to update homebrew to the latest version
@@ -62,7 +62,7 @@ $ brew update && brew upgrade
 Then install the php version of your choice with
 
 ```bash
-$ brew install php56
+$ brew install php
 ```
 
 You'll need also Composer, so let install it:
@@ -86,19 +86,21 @@ brew install wp-cli
 
 ## Usage
 
-Now the reason of the all thing: instant development. Just two commands.   
+Now the reason of the all thing: instant development. Just two commands.
 
-Clone this repo and type 
+Clone this repo and type
 
 ```bash
 composer install
 ```
 
-in order to install all the dependencies of the project. **You are already done**, just launch the php's built-in server with
+in order to install all the dependencies of the project. **You are already done**, just launch the built-in web server with
 
 ```bash
-php -S localhost:8000 -t app/
+composer serve
 ```
+
+and visit the default location [http://127.0.0.1:8000](http://127.0.0.1:8000) :rocket:
 
 ## WP Configuration
 
@@ -121,6 +123,12 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 **NOTE**
 Don't commit the `.env` file, it's very likely that you want sapearate settings for each copy of the project. e.g. different urls for each environment like website.dev, staging.website.com and website.com. Just set those domains on each respective .env and you're ready to go :)
 
+## Development custom php.ini
+
+You can customize all php configurations without touching your default/system's php.ini *while using the built-in web server*.
+
+Just edit the [`./php-server.ini`](php-server.ini) file under the [ini] section.
+
 ## Deploy :zap:
 
 Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
@@ -128,9 +136,9 @@ Thanks to SQLite DB the project itself is a self-contained package. You can just
 
 ## How to add WordPress Plugins
 
-All the php dependencies are managed by Composer, the same happens for WordPress plugins (of course if they are commodities and not custom ones). You can find all the packagist entries for WordPress plugins on the [WPackagist official website](http://wpackagist.org/). 
+All the php dependencies are managed by Composer, the same happens for WordPress plugins (of course if they are commodities and not custom ones). You can find all the packagist entries for WordPress plugins on the [WPackagist official website](http://wpackagist.org/).
 
-For example, searching for buddypress would return something like `"wpackagist-plugin/buddypress": "~2.3.0"`, you just need to drop this line inside the `composer.json` file and type 
+For example, searching for buddypress would return something like `"wpackagist-plugin/buddypress":"4.2.0"`, you just need to drop this line inside the `composer.json`'s `require` section and type
 
 ```bash
 composer update
