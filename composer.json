@@ -26,7 +26,7 @@
         "natanfelles/php-server": "^2"
     },
     "scripts": {
-        "serve": "php-server"
+        "serve": "php-server --timeout=0"
     },
     "scripts-descriptions": {
         "serve": "Start the built-in web server for development"
