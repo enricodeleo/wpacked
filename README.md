@@ -160,3 +160,6 @@ _________________________________________
 ## Author
 [Enrico Deleo](https://enricodeleo.com)
 
+# Are you looking for a modern super-developer oriented starter theme?
+[Look no further, try my Vueird starter theme powered by WebPack, Vue, SCSS](https://github.com/enricodeleo/vueird/)
+
