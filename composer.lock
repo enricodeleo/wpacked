@@ -128,20 +128,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "5.1.1",
+            "version": "5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "b5673ea8f30a518eaf311c90f1d074c44b54e15e"
+                "reference": "597236f0e4126ef92611b904725fd4e60afdc1ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/b5673ea8f30a518eaf311c90f1d074c44b54e15e",
-                "reference": "b5673ea8f30a518eaf311c90f1d074c44b54e15e",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/597236f0e4126ef92611b904725fd4e60afdc1ac",
+                "reference": "597236f0e4126ef92611b904725fd4e60afdc1ac",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "5.1.1",
+                "johnpbloch/wordpress-core": "5.2.2",
                 "johnpbloch/wordpress-core-installer": "^1.0",
                 "php": ">=5.3.2"
             },
@@ -163,27 +163,27 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-03-13T00:27:35+00:00"
+            "time": "2019-06-18T17:58:03+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "5.1.1",
+            "version": "5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "dba22982e7cb433b68f1b12a0bd4e5851f967010"
+                "reference": "bbded8adf0ddd8cafdbd6e6605e0ee82d5c1dc8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/dba22982e7cb433b68f1b12a0bd4e5851f967010",
-                "reference": "dba22982e7cb433b68f1b12a0bd4e5851f967010",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/bbded8adf0ddd8cafdbd6e6605e0ee82d5c1dc8a",
+                "reference": "bbded8adf0ddd8cafdbd6e6605e0ee82d5c1dc8a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "provide": {
-                "wordpress/core-implementation": "5.1.1"
+                "wordpress/core-implementation": "5.2.2"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -196,14 +196,14 @@
                     "homepage": "http://wordpress.org/about/"
                 }
             ],
-            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
             "homepage": "http://wordpress.org/",
             "keywords": [
                 "blog",
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-03-13T00:27:30+00:00"
+            "time": "2019-06-18T17:57:57+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",

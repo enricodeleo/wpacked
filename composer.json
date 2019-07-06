@@ -26,7 +26,7 @@
         "natanfelles/php-server": "^2"
     },
     "scripts": {
-        "serve": "php-server --timeout=0"
+       "serve": "php -d max_execution_time=-1 vendor/bin/php-server"
     },
     "scripts-descriptions": {
         "serve": "Start the built-in web server for development"
