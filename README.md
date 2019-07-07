@@ -94,10 +94,12 @@ Clone this repo and type
 composer install
 ```
 
-in order to install all the dependencies of the project. **You are already done**, just launch the built-in web server with
+in order to install all the dependencies of the project.
+
+**You are already done**, just launch the built-in web server with
 
 ```bash
-composer serve
+composer run serve --timeout=0
 ```
 
 and visit the default location [http://127.0.0.1:8000](http://127.0.0.1:8000) :rocket:
