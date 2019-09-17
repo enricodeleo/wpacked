@@ -9,6 +9,10 @@ No more XAMP/MAMP or virtual machines, or other (often conflicting) softwares on
 
 Clean, versionable, quick.
 
+## New! Heroku/Dokku ready
+
+This project will be automatically built and ready to go just pushing the repository itself to Heroku or Heroku-like environments like Dokku. It will be ran under nginx (slightly optimized with gzip and assets caching).
+
 ## Background
 
 I really like developing using the Node.js-ecosystem. I love to make my projects modular with npm and bower, I adore the easy dependency management.
