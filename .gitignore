@@ -15,6 +15,7 @@ app/content/plugins/*
 app/content/mu-plugins/*
 !app/content/mu-plugins/.gitkeep
 !app/content/mu-plugins/fallback-themes.php
+!app/content/mu-plugins/force-ssl.php
 # remember to exlude custom plugins from being ignored
 # example: !app/content/plugins/plugintobepreserved
 

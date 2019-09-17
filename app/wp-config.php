@@ -35,6 +35,18 @@ define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
 /**
+ * SSL
+ */
+// in some setups HTTP_X_FORWARDED_PROTO might contain
+// a comma-separated list e.g. http,https
+// so check for https existence
+if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && false !== strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https')) {
+  $_SERVER['HTTPS'] = 'on';
+}
+// Force SSL
+define('FORCE_SSL', getenv('FORCE_SSL'));
+
+/**
  * DB settings
  */
 
