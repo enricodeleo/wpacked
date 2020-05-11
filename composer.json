@@ -39,7 +39,7 @@
             "app/content/themes/{$name}/": ["type:wordpress-theme"]
         },
         "dropin-paths": {
-            "wp-content/": [
+            "app/content/": [
                 "package:aaemnnosttv/wp-sqlite-db:src/db.php"
             ]
         },
