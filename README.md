@@ -108,6 +108,16 @@ composer run serve --timeout=0
 
 and visit the default location [http://127.0.0.1:8000](http://127.0.0.1:8000) :rocket:
 
+## Adding WordPress plugins
+
+In a proper composer/git-driven workflow you want to add 3rd parties plugins via composer. You can find all the free plugins available in the WP ecosystem on [WordPress Packagist](https://wpackagist.org/).
+
+Example of plugin installation (digit in your shell):
+
+```bash
+composer require "wpackagist-plugin/jetpack":"8.5"
+```
+
 ## WP Configuration
 
 Thanks to phpdotenv you can store your configurations outside the public directory in a `.env` file. You'll find the file `.env.example` that you need to copy to `.env` within the root directory of the project with the following variables:

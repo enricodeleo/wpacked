@@ -20,7 +20,8 @@
         "vlucas/phpdotenv": "~2.2.0",
         "johnpbloch/wordpress": "^5.0.0",
         "composer/installers": "^1.0",
-        "wpackagist-plugin/sqlite-integration": "1.8.1"
+        "koodimonni/composer-dropin-installer": "^1.2",
+        "wpackagist-plugin/jetpack": "8.5"
     },
     "require-dev": {
         "natanfelles/php-server": "^2"
@@ -36,6 +37,11 @@
             "app/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
             "app/content/plugins/{$name}/": ["type:wordpress-plugin"],
             "app/content/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "dropin-paths": {
+            "wp-content/": [
+                "package:aaemnnosttv/wp-sqlite-db:src/db.php"
+            ]
         },
         "wordpress-install-dir": "app/wordpress"
     }
