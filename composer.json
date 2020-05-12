@@ -1,6 +1,7 @@
 {
     "name": "enricodeleo/wpacked",
     "description": "A versionable, self contained, easy deployable WordPress starter point.",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Enrico Deleo",
