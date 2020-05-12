@@ -13,6 +13,19 @@
         {
             "type": "composer",
             "url": "https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "enricodeleo/sqlite-integration",
+                "version": "dev-master",
+                "type": "WordPress-plugin",
+                "source": {
+                    "url": "https://github.com/enricodeleo/sqlite-integration.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     ],
     "require": {
@@ -21,7 +34,8 @@
         "johnpbloch/wordpress": "^5.0.0",
         "composer/installers": "^1.0",
         "koodimonni/composer-dropin-installer": "^1.2",
-        "wpackagist-plugin/jetpack": "8.5"
+        "wpackagist-plugin/jetpack": "8.5",
+        "enricodeleo/sqlite-integration": "dev-master"
     },
     "require-dev": {
         "natanfelles/php-server": "^2"

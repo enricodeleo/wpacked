@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "546e52a5a2b0d0ea54f7da302d21ef9a",
+    "content-hash": "40fe7e857e91e04d932e6da65f03be7e",
     "packages": [
         {
             "name": "composer/installers",
@@ -132,6 +132,17 @@
                 "zikula"
             ],
             "time": "2020-04-07T06:57:05+00:00"
+        },
+        {
+            "name": "enricodeleo/sqlite-integration",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enricodeleo/sqlite-integration.git",
+                "reference": "master"
+            },
+            "type": "wordpress-plugin",
+            "time": "2018-06-11T20:37:50+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -427,7 +438,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "enricodeleo/sqlite-integration": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
