@@ -1,5 +1,9 @@
 ![WPacked Logo](logo.png)
 
+_Thanks to everyone having starred my repo! If you like this project, please consider your star_
+
+[![Stargazers repo roster for @enricodeleo/wpacked](https://reporoster.com/stars/enricodeleo/wpacked)](https://github.com/enricodeleo/wpacked/stargazers)
+
 # WPacked
 
 **WPacked** tries to give you an easy development starter kit easy to maintain and deploy, **within a clean pure local environment**. Just like you usually do with npm.
