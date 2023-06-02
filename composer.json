@@ -40,5 +40,12 @@
             "app/content/themes/{$name}/": ["type:wordpress-theme"]
         },
         "wordpress-install-dir": "app/wordpress"
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "koodimonni/composer-dropin-installer": true,
+            "composer/installers": true
+        }
     }
 }

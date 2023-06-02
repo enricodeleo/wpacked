@@ -13,7 +13,14 @@ No more XAMP/MAMP or virtual machines, or other (often conflicting) softwares on
 
 Clean, versionable, quick.
 
-## New! Heroku/Dokku ready
+## Breaking Change Announcement: Dropping SQLite Support
+
+After careful consideration and thorough evaluation, we've decided to **drop the SQLite support**. The reasons behind this change:
+
+- **Development stall:** The plugin enabling SQLite support in WordPress is no longer actively maintained. As a community that values security, stability, and cutting-edge practices, depending on stalled plugins should go against our principles.
+- **No significant advantage for quickstart:** One of the main reasons for initially including SQLite support was to enable users to quickly set up a new WordPress project. However, with the advent and widespread adoption of Docker, creating a robust local stack has become a matter of seconds. Docker not only simplifies the setup process but also provides a more realistic environment that mirrors production setups.
+
+## Heroku/Dokku ready
 
 This project will be automatically built and ready to go just pushing the repository itself to Heroku or Heroku-like environments like Dokku. It will be ran under nginx (slightly optimized with gzip and assets caching).
 

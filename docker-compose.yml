@@ -30,10 +30,15 @@ services:
     volumes:
       - .:/var/www
       - ./config/php.ini:/etc/php8/conf.d/settings.ini
-    command: /bin/sh -c "/usr/bin/composer install"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        /usr/bin/composer install --no-progress --no-interaction
+        /usr/bin/supervisord -c "/etc/supervisor/conf.d/supervisord.conf"
     restart: "no"
     environment:
-      VIRTUAL_HOST: website.local
+      VIRTUAL_HOST: wordpress.local
       ENVIRONMENT: 'development'
       WP_HOME: 'http://wordpress.local'
       WP_SITEURL: 'http://wordpress.local/wordpress'
@@ -61,6 +66,7 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - /dev/null:/var/log/nginx/access.log
+      - ./config/nginx-proxy-dev.conf:/etc/nginx/conf.d/custom_proxy.conf
 
 volumes:
   mysql-data:
