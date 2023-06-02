@@ -6,12 +6,12 @@ require_once(dirname(__DIR__) . '/vendor/autoload.php');
 // Define base paths
 $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/app';
+$filePath = $root_dir . '/.env';
 define('WEBROOT_DIR', $webroot_dir);
 
 // Load env variables if .env file exists
-$filePath = $root_dir . '/.env';
-if( is_readable($filePath) ) {
-  $dotenv = new Dotenv\Dotenv($root_dir);
+if ( is_readable($filePath) ) {
+  $dotenv = Dotenv\Dotenv::createUnsafeImmutable($root_dir);
   $dotenv->load();
   $dotenv->required('ENVIRONMENT')->allowedValues(['development', 'staging', 'production']);
 }
