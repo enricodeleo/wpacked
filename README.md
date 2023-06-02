@@ -29,7 +29,7 @@ This project will be automatically built and ready to go just pushing the reposi
 I really enjoy developing using the Node.js ecosystem. I love to make my projects modular with npm and bower, I adore the easy dependency management.
 The thing I like the most is that I can start working immediately on my local machine without a full-fledged web server.
 
-Of course there are tools that give you quickly(sh) a development server within your machine, (I'm personally a big fan of [roots/bedrock](https://github.com/roots/bedrock), that inspired this project) but but all of them need a Vagrant virtual machine. Quite an overkill for most projects.
+Of course there are tools that give you quickly(sh) a development server within your machine, (I'm personally a big fan of [roots/bedrock](https://github.com/roots/bedrock), that inspired this project) but all of them need a Vagrant virtual machine. Quite an overkill for most projects.
 
 I also like the idea of just dropping a project on a webserver when I'm done (almost impossible with MySQL).
 
