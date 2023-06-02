@@ -1,14 +1,14 @@
 ![WPacked Logo](logo.png)
 
-_Thanks to everyone having starred my repo! If you like this project, please consider your star_
+_Thanks to everyone who has starred my repo! If you like this project, please consider giving it a star._
 
 [![Stargazers repo roster for @enricodeleo/wpacked](https://reporoster.com/stars/enricodeleo/wpacked)](https://github.com/enricodeleo/wpacked/stargazers)
 
 # WPacked
 
-**WPacked** tries to give you an easy development starter kit easy to maintain and deploy, **within a clean pure local environment**. Just like you usually do with npm.
+**WPacked** aims to provide an easy-to-maintain and deployable development starter kit, **within a clean pure local environment**. Just like you usually do with npm.
 
-No more XAMP/MAMP or virtual machines, or other (often conflicting) softwares on your local machines.
+No more XAMP/MAMP or virtual machines, or other (often conflicting) software on your local machines.
 **You just need PHP**.
 
 Clean, versionable, quick.
@@ -26,10 +26,10 @@ This project will be automatically built and ready to go just pushing the reposi
 
 ## Background
 
-I really like developing using the Node.js-ecosystem. I love to make my projects modular with npm and bower, I adore the easy dependency management.
-The thing I like the most is that I can start working immediately on my local machine without a full fledged webserver.
+I really enjoy developing using the Node.js ecosystem. I love to make my projects modular with npm and bower, I adore the easy dependency management.
+The thing I like the most is that I can start working immediately on my local machine without a full-fledged web server.
 
-Of course there are tools that give you quickly(sh) a development server within your machine, (I'm personally a big fan of [roots/bedrock](https://github.com/roots/bedrock), that inspired this project) but all of them need a Vagrant virtual machine. Quite an overkill for most project.
+Of course there are tools that give you quickly(sh) a development server within your machine, (I'm personally a big fan of [roots/bedrock](https://github.com/roots/bedrock), that inspired this project) but but all of them need a Vagrant virtual machine. Quite an overkill for most projects.
 
 I also like the idea of just dropping a project on a webserver when I'm done (almost impossible with MySQL).
 
@@ -100,9 +100,9 @@ brew install wp-cli
 
 ## Usage
 
-Now the reason of the all thing: instant development. Just two commands.
+The goal of this project is instant development. It requires just two commands.
 
-Clone this repo and type
+Clone this repo and run
 
 ```bash
 composer install
@@ -147,7 +147,7 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 **For security purposes, don't forget to set AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT, NONCE_SALT to different (long) random strings on production.**
 
 **NOTE**
-Don't commit the `.env` file, it's very likely that you want sapearate settings for each copy of the project. e.g. different urls for each environment like website.dev, staging.website.com and website.com. Just set those domains on each respective .env and you're ready to go :)
+Don't commit the `.env` file, it's very likely that you want sapearate settings for each copy of the project. e.g. different URLs for each environment like website.dev, staging.website.com and website.com. Just set those domains on each respective .env and you're ready to go :)
 
 ## Development custom php.ini
 
@@ -162,7 +162,7 @@ You can just upload it to your server and point the webserver of your choice to 
 
 ## How to add WordPress Plugins
 
-All the php dependencies are managed by Composer, the same happens for WordPress plugins (of course if they are commodities and not custom ones). You can find all the packagist entries for WordPress plugins on the [WPackagist official website](http://wpackagist.org/).
+All PHP dependencies are managed by Composer, the same happens for WordPress plugins (of course if they are commodities and not custom ones). You can find all the packagist entries for WordPress plugins on the [WPackagist official website](http://wpackagist.org/).
 
 For example, searching for buddypress would return something like `"wpackagist-plugin/buddypress":"4.2.0"`, you just need to drop this line inside the `composer.json`'s `require` section and type
 
@@ -170,7 +170,7 @@ For example, searching for buddypress would return something like `"wpackagist-p
 composer update
 ```
 
-The whole plugins directory is under `.gitignore`, so if you add custom plugins you need to exclude them (you'll find an example within the .gitignore file) and add them to git.
+The whole plugins directory is under `.gitignore`, so if you add custom plugins you need to exclude them (you'll find an example within the .gitignore file) and add them to Git.
 
 _________________________________________
 
@@ -183,7 +183,7 @@ A docker file and docker-compose are now included for building and local develop
 Run `docker compose up` in order to bring up the entire local stack. It will start all the containers needed for a great experience. The same docker-compose could also be seen as a starting point for your production configuration if you're using e.g. *docker swarm*.
 
 The local development stack features:
-- A wordpress container powered by Php8, Nginx, Composer
+- A WordPress container powered by PHP 8, Nginx, Composer
 - MariaDB
 - Adminer for database operations through the browser
 - An nginx reverse proxy so that you can access your new website via domain not localhost
@@ -207,13 +207,13 @@ docker compose run --rm wordpress /bin/sh
 
 ### Building
 
-From root ofthis project run `docker build .` in order to build a docker image.
+From the root of this project, run `docker build .` in order to build a docker image.
 
 _________________________________________
 
 ## Author
 [Enrico Deleo](https://enricodeleo.com)
 
-# Are you looking for a modern super-developer oriented starter theme?
+# Are you looking for a modern super-developer-oriented starter theme?
 [Look no further, try my Vueird starter theme powered by WebPack, Vue, SCSS](https://github.com/enricodeleo/vueird/)
 
