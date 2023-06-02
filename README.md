@@ -38,26 +38,19 @@ Checkout the presentation published during August Wordpress Meetup in Rome http:
 
 * Git-friendly
 * Dependency management via [Composer](https://getcomposer.org/)
-* Deployable and versionable DB thanks to [SQLite Integration](https://wordpress.org/plugins/sqlite-integration/) (WordPress Plugin)
+* Containerizable
 
 ## Requirements
 
 * A Unix-like OS
-* PHP >= 5.4
+* PHP >= 7.4
 * Composer
-* SQLite
+* MySQL/MariDB
 
 ## Requirements installation
 
 ### OS X
 
-#### Quickest, built-in solution
-
-You're OS is shipped with php and SQLite already installed. [Follow these instructions to get Composer](https://getcomposer.org/doc/00-intro.md).
-
-#### My favorite
-
-As a developer you might want to use the version of php of your choice (remember WordPress supports legacy php 5.2.4+ but recommends latest 7+ versions).
 The best way to manage packages and installations on your Mac is _Homebrew_.
 If you haven't it yet, well you should. Follow the instructions [on the Homebrew's official website](http://brew.sh/).
 
@@ -77,6 +70,12 @@ You'll need also Composer, so let install it:
 
 ```bash
 brew install composer
+```
+
+For a local database:
+
+```bash
+brew install mariadb
 ```
 
 #### Optional
@@ -135,7 +134,6 @@ Thanks to phpdotenv you can store your configurations outside the public directo
 | DB_USER          | user of the MySQL DB|
 | DB_PASSWORD      | password of the MySQL DB|
 | DB_HOST          | host of the MySQL DB|
-| USE_MYSQL        | `1` for MySQL, `0` for SQLite|
 | FORCE_SSL        | `1` in order to force SSL (redirects all requests to https://)|
 | DISABLE_WP_CRON  | whether or not the app should use the WP cron system (false requires setting up cron manually on your server)|
 
@@ -152,7 +150,7 @@ Just edit the [`./php-server.ini`](php-server.ini) file under the [ini] section.
 
 ## Deploy :zap:
 
-Thanks to SQLite DB the project itself is a self-contained package. You can just upload it to your server and point the webserver of your choice to `/path/to/project/app`.
+You can just upload it to your server and point the webserver of your choice to `/path/to/project/app` or build and deploy your docker image.
 
 
 ## How to add WordPress Plugins
@@ -169,12 +167,40 @@ The whole plugins directory is under `.gitignore`, so if you add custom plugins 
 
 _________________________________________
 
+## Docker 🆕
 
-## Notes about SQLite
+A docker file and docker-compose are now included for building and local development with MariaDB and Nginx included.
 
-Even if the WordPress plugin included on this repo tries to create a drop-in replacement for MySQL converting all the MySQL queries to SQLite, there are certain operations that are not possible on SQLite. Hence, some plugin may not work as expected. You can see [a list of known non-working plugins here](http://dogwood.skr.jp/wordpress/sqlite-integration/#plugin-compat). I personally haven't found issues with other plugins until now (even heavy ones like WPML) but keep in mind that it could happen.
+### Local development
 
-Another characteristic to keep in mind is that **SQLite is far from being a production database for big sites or with an heavy traffic**. In those cases you want to stay on a more efficient and scalable db engine like MySQL (or my favorite, MariaDB). You can switch from SQLite to MySQL without uninstalling the plugin with a simple false in the config file (keeping SQLite on local machine and MySQL on staging and production is a way).
+Run `docker compose up` in order to bring up the entire local stack. It will start all the containers needed for a great experience. The same docker-compose could also be seen as a starting point for your production configuration if you're using e.g. *docker swarm*.
+
+The local development stack features:
+- A wordpress container powered by Php8, Nginx, Composer
+- MariaDB
+- Adminer for database operations through the browser
+- An nginx reverse proxy so that you can access your new website via domain not localhost
+
+Thanks to the reverse proxy you'll access the website at `http://wordpress.local` and adminer at `http://adminer.local`.
+
+#### Accessing local domains
+
+You need to add these lines in your `hosts` file:
+
+```
+127.0.0.1 wordpress.local
+127.0.0.1 adminer.local
+```
+
+#### Run commands inside the Wordpress container
+
+```bash
+docker compose run --rm wordpress /bin/sh
+```
+
+### Building
+
+From root ofthis project run `docker build .` in order to build a docker image.
 
 _________________________________________
 

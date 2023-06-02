@@ -1,0 +1,66 @@
+version: '3.3'
+
+services:
+  mysql:
+    image: mariadb
+    restart: "no"
+    volumes:
+      - mysql-data:/var/lib/mysql:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlpwd
+      MYSQL_USER: mysqluser
+      MYSQL_PASSWORD: mysqlpwd
+      MYSQL_DATABASE: wordpress
+
+  adminer:
+    image: dockette/adminer:mysql
+    restart: "no"
+    depends_on:
+      - mysql
+    environment:
+      VIRTUAL_HOST: adminer.local
+      VIRTUAL_PORT: 80
+
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    depends_on:
+      - mysql
+    volumes:
+      - .:/var/www
+      - ./config/php.ini:/etc/php8/conf.d/settings.ini
+    command: /bin/sh -c "/usr/bin/composer install"
+    restart: "no"
+    environment:
+      VIRTUAL_HOST: website.local
+      ENVIRONMENT: 'development'
+      WP_HOME: 'http://wordpress.local'
+      WP_SITEURL: 'http://wordpress.local/wordpress'
+      DB_HOST: mysql
+      DB_NAME: wordpress
+      DB_USER: mysqluser
+      DB_PASSWORD: mysqlpwd
+      DISABLE_WP_CRON: 0
+      FORCE_SSL: 0
+      AUTH_KEY: 'jy03kgzp5zf422vtbmx4k89xs2t1c0ryip9b8cdirsmdkp703lrq97bewjcigvd7'
+      SECURE_AUTH_KEY: 'htl84jtuxjiv9nyqegz6t7qpofja5l7a65g7dwmhi3k58nlszaak6ltc9ka3ulqs'
+      LOGGED_IN_KEY: 'e53w1aeaqh4ij9tmv79c35wpa1pgmzk7i4ydrj6y5vhkt0g5tp3pvdtfz33wwctj'
+      NONCE_KEY: '89z7hqw628sh0hx0ti18eyg65nr8ztler215zppotqshbm63kr24ad8kgfbhwpm9'
+      AUTH_SALT: '51i3da0jl3hr9w06oubekwi1zaqq57q2iwtzy71zimfyjqo94jou0yksom9p2253'
+      SECURE_AUTH_SALT: 'jcb35gltiiuycz37wegn6ont3pvrtrne9bw23d6q45jfp7qmq2ift6bt12wbs9ap'
+      LOGGED_IN_SALT: 'iyfdx65kbtaq2tdpdsooinjt98477mttvq4083dxykcjsjfbk8r4j3jcii2h4gdr'
+      NONCE_SALT: 'gog1noty6dbv109g322qizbs77ajrcadd4z2vdg48szqsexjh6v406mxltlursoo'
+
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy:alpine
+    restart: "no"
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - /dev/null:/var/log/nginx/access.log
+
+volumes:
+  mysql-data:

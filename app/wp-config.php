@@ -51,19 +51,12 @@ define('FORCE_SSL', getenv('FORCE_SSL'));
  */
 
 $table_prefix = 'wp_';
-define('USE_MYSQL', (bool) getenv('USE_MYSQL'));  // turn it to true if you want to use MySQL instead of SQLite
 define('DB_NAME', getenv('DB_NAME'));
 define('DB_USER', getenv('DB_USER'));
 define('DB_PASSWORD', getenv('DB_PASSWORD'));
 define('DB_HOST', getenv('DB_HOST'));
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
-
-/**
-* SQLITE DB
-*/
-define('DB_DIR', $root_dir  . '/database/');
-define('DB_FILE', 'db.sqlite');
 
 /**
  * Authentication Unique Keys and Salts

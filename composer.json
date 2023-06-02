@@ -14,29 +14,15 @@
         {
             "type": "composer",
             "url": "https://wpackagist.org"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "enricodeleo/sqlite-integration",
-                "version": "dev-master",
-                "type": "WordPress-plugin",
-                "source": {
-                    "url": "https://github.com/enricodeleo/sqlite-integration.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "vlucas/phpdotenv": "~2.2.0",
-        "johnpbloch/wordpress": "^5.0.0",
-        "composer/installers": "^1.0",
-        "koodimonni/composer-dropin-installer": "^1.2",
-        "wpackagist-plugin/jetpack": "8.5",
-        "enricodeleo/sqlite-integration": "dev-master"
+        "php": ">=7.4",
+        "vlucas/phpdotenv": "~5.5.0",
+        "johnpbloch/wordpress": "^6.0.0",
+        "composer/installers": "^2.2.0",
+        "koodimonni/composer-dropin-installer": "^1.4",
+        "wpackagist-plugin/jetpack":"12.1"
     },
     "require-dev": {
         "natanfelles/php-server": "^2"
@@ -52,11 +38,6 @@
             "app/content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
             "app/content/plugins/{$name}/": ["type:wordpress-plugin"],
             "app/content/themes/{$name}/": ["type:wordpress-theme"]
-        },
-        "dropin-paths": {
-            "app/content/": [
-                "package:aaemnnosttv/wp-sqlite-db:src/db.php"
-            ]
         },
         "wordpress-install-dir": "app/wordpress"
     }
